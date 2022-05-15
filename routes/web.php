@@ -13,5 +13,4 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('send/mail/1', [SampleController::class, 'sendMailableMail']);
+Route::get('send/mail', [SampleController::class, 'sendMailableMail']);

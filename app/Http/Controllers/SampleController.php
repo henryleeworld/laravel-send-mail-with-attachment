@@ -21,8 +21,8 @@ class SampleController extends Controller
             'body'    => '範例內容',
             'comment' => '謝謝您。',
             'file'    => [
-                public_path('pdf/107年災害防救演習綱要計畫.pdf'),
                 public_path('pdf/109年災害防救演習綱要計畫.pdf'),
+                public_path('pdf/110年災害防救演習綱要計畫.pdf'),
             ],
         ];
         Mail::to($data['email'])->send(new SampleMail($data));
