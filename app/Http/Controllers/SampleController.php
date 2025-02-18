@@ -16,16 +16,16 @@ class SampleController extends Controller
     {
         $data = [
             'email'   => 'henryleeworld@gmail.com',
-			'subject' => '電子郵件範本',
-			'title'   => '電子郵件主題',
-            'body'    => '範例內容',
-            'comment' => '謝謝您。',
+			'subject' => __('Email template'),
+			'title'   => __('Email subject'),
+            'body'    => __('Sample content'),
+            'comment' => __('Thank you.'),
             'file'    => [
                 storage_path('pdf/111年災害防救演習綱要計畫.pdf'),
                 storage_path('pdf/112年災害防救演習綱要計畫.pdf'),
             ],
         ];
         Mail::to($data['email'])->send(new SampleMail($data));
-        dd('電子郵件發送成功！');
+        dd(__('Email sent successfully!'));
     }
 }
